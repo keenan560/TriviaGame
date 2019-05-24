@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cardo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Bible Trivia Game</title>
+</head>
+
+<body>
+    <!-- jumbron with start button -->
+    <div class="jumbotron text-center col-8 mx-auto">
+        <h1>Welcome to Bible Trivia</h1>
+        <img class="d-inline-block align-left" height=60 width=60 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStSiL_0agbnwUiAWdtjGIG041uu_s9ANfWxnm8iwjjSYc6h2z53w"
+            alt="">
+        <button onclick="addEventListener('click', renderQuestion())" class="btn btn-lg p-4 mt-3">
+            <h3 class="text-center">Start Quiz</h3>
+        </button>
+    </div>
+
+    <!-- Questions and Answers Appear here -->
+    <div class="card mx-auto">
+        <div class="card-header">
+            <div class="row">
+                <p id="num-questions" class="ml-4"></p>
+                <p id="timer" class="">Time Remaining: </p>
+            </div>
+
+        </div>
+        <div class="card-body input-group">
+            <blockquote class="blockquote mb-0">
+                <p id="q1" class="query">
+                    1) How many books are in the Bible?
+                    <br>
+                    <input class="choices" name="q1" type="radio" value="34">
+                    34
+                    <br>
+                    <input class="choices" name="q1" type="radio" value="78">
+                    78
+                    <br>
+                    <input class="choices" name="q1" type="radio" value="66">
+                    66
+                    <br>
+                    <input class="choices" name="q1" type="radio" value="25">
+                    25
+                </p>
+                <p id="q2" class="query">
+                    2) How many sons did Jacob have?
+                    <br>
+                    <input class="choices" name="q2" type="radio" value="12">
+                    12
+                    <br>
+                    <input class="choices" name="q2" type="radio" value="3">
+                    3
+                    <br>
+                    <input class="choices" name="q2" type="radio" value="6">
+                    6
+                    <br>
+                    <input class="choices" name="q2" type="radio" value="9">
+                    9
+                </p>
+                <p id="q3" class="query">
+                    3) Who was the first victim of murder?
+                    <br>
+                    <input class="choices" name="q3" type="radio" value="Adam">
+                    Adam
+                    <br>
+                    <input class="choices" name="q3" type="radio" value="Eve">
+                    Eve
+                    <br>
+                    <input class="choices" name="q3" type="radio" value="Seth">
+                    Seth
+                    <br>
+                    <input class="choices" name="q3" type="radio" value="Abel">
+                    Abel
+                </p>
+                <p id="q4" class="query">
+                    4) Whose wife was responsible for the imprisonment of Joseph?
+                    <br>
+                    <input class="choices" name="q4" type="radio" value="Abraham's">
+                    Abraham's
+                    <br>
+                    <input class="choices" name="q4" type="radio" value="Potiphar's">
+                    Potiphar's
+                    <br>
+                    <input class="choices" name="q4" type="radio" value="Judas's">
+                    Judas's
+                    <br>
+                    <input class="choices" name="q4" type="radio" value="Pharoh's">
+                    Pharoh's
+                </p>
+                <p id="q5" class="query">
+                    5) Who was the first king of the nation of Israel?
+                    <br>
+                    <input class="choices" name="q5" type="radio" value="King David">
+                    King David
+                    <br>
+                    <input class="choices" name="q5" type="radio" value="King Solomon">
+                    King Solomon
+                    <br>
+                    <input class="choices" name="q5" type="radio" value="King Asa">
+                    King Asa
+                    <br>
+                    <input class="choices" name="q5" type="radio" value="King Saul">
+                    King Saul
+                </p>
+                <p id="q6" class="query">
+                    6) What man lost his anointing at the deceitfulness of Delilah?
+                    <br>
+                    <input class="choices" name="q6" type="radio" value="Job">
+                    Job
+                    <br>
+                    <input class="choices" name="q6" type="radio" value="Paul">
+                    Paul
+                    <br>
+                    <input class="choices" name="q6" type="radio" value="Samson">
+                    Samson
+                    <br>
+                    <input class="choices" name="q6" type="radio" value="Elijah">
+                    Elijah
+                </p>
+                <p id="q7" class="query">
+                    7) What was the name of the angel who led the platoon that overcame and thrusted the devil out of
+                    Heaven?
+                    <br>
+                    <input class="choices" name="q7" type="radio" value="Michael">
+                    Michael
+                    <br>
+                    <input class="choices" name="q7" type="radio" value="Gabriel">
+                    Gabriel
+                    <br>
+                    <input class="choices" name="q7" type="radio" value="Uriel">
+                    Uriel
+                    <br>
+                    <input class="choices" name="q7" type="radio" value="Raphael">
+                    Raphael
+                </p>
+                <p id="q8" class="query">
+                    8) What miracles did Jesus perform?
+                    <br>
+                    <input class="choices" name="q8" type="radio" value="Walk on water">
+                    Walk on water
+                    <br>
+                    <input class="choices" name="q8" type="radio" value="Raise the dead">
+                    Raise the dead
+                    <br>
+                    <input class="choices" name="q8" type="radio" value="Heal diseases">
+                    Heal diseases
+                    <br>
+                    <input class="choices" name="q8" type="radio" value="All of the above">
+                    All of the above
+                </p>
+                <p id="q9" class="query">
+                    9) What was the name of the disciple that denied Jesus shortly after his arrest?
+                    <br>
+                    <input class="choices" name="q9" type="radio" value="Judas">
+                    Judas
+                    <br>
+                    <input class="choices" name="q9" type="radio" value="Peter">
+                    Peter
+                    <br>
+                    <input class="choices" name="q9" type="radio" value="John">
+                    John
+                    <br>
+                    <input class="choices" name="q9" type="radio" value="Matthew">
+                    Matthew
+                </p>
+                <p id="q10" class="query">
+                    10) What book speaks of the final judgement and destruction of the devil?
+                    <br>
+                    <input class="choices" name="q10" type="radio" value="Genesis">
+                    Genesis
+                    <br>
+                    <input class="choices" name="q10" type="radio" value="Exodus">
+                    Exodus
+                    <br>
+                    <input class="choices" name="q10" type="radio" value="Jude">
+                    Jude
+                    <br>
+                    <input class="choices" name="q10" type="radio" value="Revelation">
+                    Revelation
+                </p>
+
+            </blockquote>
+            <div class="" id="submit"></div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

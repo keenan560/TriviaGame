@@ -1,0 +1,40 @@
+body { 
+  background: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/adam-and-eve-in-the-garden-of-eden-wenzel-peter.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;  
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Cardo', serif;
+}
+
+.jumbotron {
+    opacity: .8;
+}   
+
+button {
+   border: solid 3px green !important;
+   color: green !important;
+}
+
+.card {
+  opacity: .8;
+  max-width: 950px;
+}
+
+#timer {
+  margin-left: 300px;
+ 
+}
+
+.card-header {
+  font-size: 20px;
+}
+
+.card-body {
+  font-size: 20px;
+}
+
+#submit {
+  margin-left: 45%;
+  margin-right: 55%;
+}
