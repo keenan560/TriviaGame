@@ -84,11 +84,11 @@ images[11] = "assets/images/tower.jpg";
 function changeBackground() {
     
     if (i < images.length - 1 ) {
-        $('body').fadeOut("fast", function () {
+        $('body').fadeOut(100, function () {
             $('body').css({
                 'background-image': "url('" + images[i] + "')"
             });
-            $('body').fadeIn("fast");
+            $('body').fadeIn(100);
         }); 
         i++;
     } else {
