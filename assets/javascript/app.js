@@ -24,7 +24,7 @@ let timer = function () {
 
 //Timer variable and function
 
-var seconds = 120;
+var seconds = 90;
 
 function decrementtSeconds() {
     if (seconds !== 0) {
@@ -65,7 +65,7 @@ function displayResults() {
 
 var i = 0;
 
-var time = 10000 ;
+var time = 7000 ;
 
 var images = [];
 
