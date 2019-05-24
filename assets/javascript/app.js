@@ -24,7 +24,7 @@ let timer = function () {
 
 //Timer variable and function
 
-var seconds = 90;
+var seconds = 120;
 
 function decrementtSeconds() {
     if (seconds !== 0) {
@@ -36,6 +36,7 @@ function decrementtSeconds() {
 }
 
 function renderQuestion() {
+    music.play(); 
     $(".jumbotron").hide();
     $(".card").show();
     $("#num-questions").html("Total No. of Questions: " + answerKey.length);
@@ -53,7 +54,7 @@ function displayResults() {
     clearInterval(timer);
     $(".card").hide();
     $(".jumbotron").empty();
-    $(".jumbotron").append("<h1>"+ "Time is up! Let's see how you did:" + "<br>");
+    $(".jumbotron").append("<h1>" + "Time is up! Let's see how you did:" + "<br>");
     $(".jumbotron").append("<h1 class='results'>" + "Correct Answers: " + correctAnswers + "<h1 class='results'>" + "Incorrect Answers: " + incorrectAnswers + "<h1 class='results'>" + "Unanswered Questions: " + unanswered);
     $(".jumbotron").append("<button onclick='document.location.reload()' id='restart'class='btn btn-lg p-4 mt-3'>" + "Restart");
     $(".jumbotron").show();
@@ -62,24 +63,49 @@ function displayResults() {
 
 // Carousel
 
-// var i = 0;
+var i = 0;
 
-// var time = 3000;
+var time = 10000 ;
 
-// var images= [];
+var images = [];
 
-// images[0] = ""
-// images[1] = ""
-// images[2] = ""
-// images[3] = ""
+images[1] = "assets/images/david.jpg";
+images[2] = "assets/images/eden.jpg";
+images[3] = "assets/images/eve.jpg";
+images[4] = "assets/images/watercolor.jpeg";
+images[5] = "assets/images/cain-abel.jpg";
+images[6] = "assets/images/moses.jpg"
+images[7] = "assets/images/michael.jpg";
+images[8] = "assets/images/jesus-water.jpg";
+images[9] = "assets/images/samson.jpg";
+images[10] = "assets/images/fight.jpg";
+images[11] = "assets/images/tower.jpg";
 
-// function changeBackground() {
-//     document.slide.src =
-// }
+function changeBackground() {
+    
+    if (i < images.length - 1 ) {
+        $('#background').fadeOut("fast", function () {
+            $('body').css({
+                'background-image': "url('" + images[i] + "')"
+            });
+            $('#background').fadeIn("fast");
+        }); 
+        i++;
+    } else {
+        i = 0;
+    }
+    setTimeout(changeBackground, time);
 
+}
+// Music 
+var music = new Audio('assets/audio/Calming-harp-music.mp3');
+   
 
 
 $(document).ready(function () {
+   
+    changeBackground();
+
     $(".card").hide();
 
     $("#submit").click(displayResults);
@@ -95,7 +121,7 @@ $(document).ready(function () {
             incorrectAnswers += 1;
         }
     })
-    
+
 })
 
 
