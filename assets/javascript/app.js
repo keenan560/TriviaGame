@@ -65,7 +65,7 @@ function displayResults() {
 
 var i = 0;
 
-var time = 7000 ;
+var time = 5000 ;
 
 var images = [];
 
@@ -82,23 +82,27 @@ images[10] = "assets/images/fight.jpg";
 images[11] = "assets/images/tower.jpg";
 
 function changeBackground() {
-    
-    if (i < images.length - 1 ) {
-        $('body').fadeOut(100, function () {
-            $('body').css({
-                'background-image': "url('" + images[i] + "')"
-            });
-            $('body').fadeIn(100);
-        }); 
+    var img = document.getElementById("slide")
+    img.setAttribute("src", images[i]);
+    img.className = "fadeIn";
+    if (i < images.length - 1) {
         i++;
     } else {
         i = 0;
     }
+
+    setTimeout(function () {
+        img.className = "fadeOut";
+    }, 4000);
+
     setTimeout(changeBackground, time);
 
 }
+
+window.onload = changeBackground;
+
 // Music 
-var music = new Audio('assets/audio/Calming-harp-music.mp3');
+var music = new Audio("assets/audio/Calming-harp-music.mp3");
    
 
 
@@ -111,7 +115,7 @@ $(document).ready(function () {
     $("#submit").click(displayResults);
 
     $(".choices").click(function (event) {
-        userInput = event.target.value
+        userInput = event.target.value;
         console.log(userInput);
         if (answerKey.includes(userInput)) {
             unanswered -= 1;
