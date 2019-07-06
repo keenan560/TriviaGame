@@ -65,7 +65,7 @@ function displayResults() {
 
 var i = 0;
 
-var time = 5000 ;
+var time = 7000 ;
 
 var images = [];
 
@@ -84,16 +84,17 @@ images[11] = "assets/images/tower.jpg";
 function changeBackground() {
     var img = document.getElementById("slide")
     img.setAttribute("src", images[i]);
-    img.className = "fadeIn";
+    $(img).addClass('slideInUp');
     if (i < images.length - 1) {
+
         i++;
     } else {
         i = 0;
     }
 
     setTimeout(function () {
-        img.className = "fadeOut";
-    }, 4000);
+        img.className = "fadeOutUp";
+    }, 5000);
 
     setTimeout(changeBackground, time);
 
