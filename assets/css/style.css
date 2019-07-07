@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:700&display=swap');
+
+
+
 body{ 
      height: 100%;
            width: 100%;
            margin: 0;
            padding: 0;
-           /* display: inline-block; */
            position: relative;
            background-size: cover;
            overflow: visible;
            position: relative;
-  
-   font-family: 'Cardo', serif;
-
+           font-family: 'Fira Sans', sans-serif;
 
 }
    
@@ -27,7 +28,6 @@ body{
         -moz-background-size: cover;  
         -o-background-size: cover;
         background-size: cover;
-    
         background-repeat: no-repeat;
         background-position: left top;
         -webkit-animation-duration: 3s;
@@ -36,38 +36,6 @@ body{
         animation-fill-mode: both;
      }
      
-     /* @-webkit-keyframes fadeIn {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
-     }
-     
-     @keyframes fadeIn {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
-     }
-     
-     .fadeIn {
-        -webkit-animation-name: fadeIn;
-        animation-name: fadeIn;
-     }
-
-     @-webkit-keyframes fadeOut {
-      0% {opacity: 1;}
-      100% {opacity: 0;}
-   }
-   
-   @keyframes fadeOut {
-      0% {opacity: 1;}
-      100% {opacity: 0;}
-   }
-   
-   .fadeOut {
-      -webkit-animation-name: fadeOut;
-      animation-name: fadeOut;
-   }
- */
-
-
 
 .jumbotron {
     opacity: .8;
@@ -81,6 +49,7 @@ button {
 .card {
   opacity: .8;
   max-width: 950px;
+  font-weight: 900;
 }
 
 #timer {
@@ -90,6 +59,7 @@ button {
 
 .card-header {
   font-size: 20px;
+  font-weight: 900;
 }
 
 .card-body {

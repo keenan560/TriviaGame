@@ -36,7 +36,7 @@ function decrementtSeconds() {
 }
 
 function renderQuestion() {
-    music.play(); 
+    music.play();
     $(".jumbotron").hide();
     $(".card").show();
     $("#num-questions").html("Total No. of Questions: " + answerKey.length);
@@ -65,7 +65,7 @@ function displayResults() {
 
 var i = 0;
 
-var time = 7000 ;
+var time = 7000;
 
 var images = [];
 
@@ -84,16 +84,18 @@ images[11] = "assets/images/tower.jpg";
 function changeBackground() {
     var img = document.getElementById("slide")
     img.setAttribute("src", images[i]);
-    $(img).addClass('slideInUp');
+   
+    $(img).addClass('slideInLeft  slower');
     if (i < images.length - 1) {
-
+        
+  
         i++;
     } else {
         i = 0;
     }
 
     setTimeout(function () {
-        img.className = "fadeOutUp";
+        img.className = "fadeOutDown slower";
     }, 5000);
 
     setTimeout(changeBackground, time);
@@ -104,11 +106,11 @@ window.onload = changeBackground;
 
 // Music 
 var music = new Audio("assets/audio/Calming-harp-music.mp3");
-   
+
 
 
 $(document).ready(function () {
-   
+
     changeBackground();
 
     $(".card").hide();
