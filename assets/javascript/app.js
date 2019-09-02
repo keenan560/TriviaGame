@@ -36,7 +36,7 @@ function decrementtSeconds() {
 }
 
 function renderQuestion() {
-    music.play();
+    // music.play();
     $(".jumbotron").hide();
     $(".card").show();
     $("#num-questions").html("Total No. of Questions: " + answerKey.length);
@@ -102,7 +102,7 @@ function changeBackground() {
 
 }
 
-window.onload = changeBackground;
+// window.onload = changeBackground;
 
 // Music 
 var music = new Audio("assets/audio/Calming-harp-music.mp3");
@@ -111,7 +111,7 @@ var music = new Audio("assets/audio/Calming-harp-music.mp3");
 
 $(document).ready(function () {
 
-    changeBackground();
+    // changeBackground();
 
     $(".card").hide();
 
