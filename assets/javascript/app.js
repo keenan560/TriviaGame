@@ -36,7 +36,7 @@ function decrementtSeconds() {
 }
 
 function renderQuestion() {
-    // music.play();
+    music.play();
     $(".jumbotron").hide();
     $(".card").show();
     $("#num-questions").html("Total No. of Questions: " + answerKey.length);
