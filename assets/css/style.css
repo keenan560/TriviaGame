@@ -55,6 +55,10 @@ button {
   
    }
 
+   h1, h3 {
+     font-size: 22px;
+   }
+
    .jumbotron {
       background-color: white;
    }
@@ -90,7 +94,7 @@ button {
      
     }
     h1, h3 {
-      font-size: 20px !important;
+      font-size: 18px !important;
     }
 
     #timer {
@@ -106,8 +110,9 @@ button {
       font-size: 10px !important;
     }
 
-    #start, #submit {
+    #start, #submit, button {
       border: thick solid palegoldenrod !important;
       font-size: 24px !important;
+      color: darkslategrey !important;
     }
  }

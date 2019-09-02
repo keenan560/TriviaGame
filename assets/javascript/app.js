@@ -56,7 +56,7 @@ function displayResults() {
     $(".jumbotron").empty();
     $(".jumbotron").append("<h1>" + "Time is up! Let's see how you did:" + "<br>");
     $(".jumbotron").append("<h1 class='results'>" + "Correct Answers: " + correctAnswers + "<h1 class='results'>" + "Incorrect Answers: " + incorrectAnswers + "<h1 class='results'>" + "Unanswered Questions: " + unanswered);
-    $(".jumbotron").append("<button onclick='document.location.reload()' id='restart'class='btn btn-lg p-4 mt-3'>" + "Restart");
+    $(".jumbotron").append("<button onclick='document.location.reload()' id='restart'class='btn btn-lg p-4 mt-3 mx-auto'>" + "Restart");
     $(".jumbotron").show();
 
 }
