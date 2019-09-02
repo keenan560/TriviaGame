@@ -13,6 +13,7 @@ body {
 
 .jumbotron {
     opacity: .8;
+    color: black;
 }   
 
 button {
@@ -79,4 +80,34 @@ button {
      
    }
 
+ }
+
+ /* iphone x */ 
+ @media only screen and (max-width: 400px) {
+    body {
+      width:100%;
+      background-color: darkslategrey;
+     
+    }
+    h1, h3 {
+      font-size: 20px !important;
+    }
+
+    #timer {
+      font-size: 10px !important;
+      text-align: center !important;
+      margin: 10px 10px 10px 10px;
+
+    }
+    .card {
+      width:95% !important;
+    }
+    .query {
+      font-size: 10px !important;
+    }
+
+    #start, #submit {
+      border: thick solid palegoldenrod !important;
+      font-size: 24px !important;
+    }
  }
